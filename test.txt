@@ -1,4 +1,0 @@
-hello world
-
-java
-welcome to my world.
