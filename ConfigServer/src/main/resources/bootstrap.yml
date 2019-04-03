@@ -1,0 +1,19 @@
+server:
+  port: 8700
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+        #git环境地址
+          uri: https://gitee.com/fqwang/ly.git
+          search-paths:
+            -  configs
+      #读取分支环境
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
