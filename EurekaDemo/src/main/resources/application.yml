@@ -1,0 +1,18 @@
+server:
+  port: 8230
+  
+spring:
+  application:
+    name: api-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/
+  instance:
+    #EurekaClient向EurekaServer端发送心跳的时间间隔，默认为秒
+    #lease-renewal-interval-in-seconds: 1
+    #EurekaServer收到最后一次心跳后等待的时间上限，超时则将该服务实例移除
+    #lease-expiration-duration-in-seconds: 2
+      

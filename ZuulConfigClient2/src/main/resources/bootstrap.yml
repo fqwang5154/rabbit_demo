@@ -1,0 +1,25 @@
+server:
+  port: 82
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+
+spring:
+  application:
+    name: zuul-service
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+          
+          

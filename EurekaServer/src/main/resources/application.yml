@@ -1,0 +1,22 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: eureka-server
+  security:
+    user:
+      name: judy
+      password: 123
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8100/eureka/
+  server:
+    #关闭自我保护机制，保证不可用服务及时移除
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 20000
+
