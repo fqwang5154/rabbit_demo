@@ -1,0 +1,15 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: test-configClient
+  cloud:
+    config:
+      profile: sit
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
